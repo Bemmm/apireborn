@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "npm i -g nodemon && nodemon app.js --exec babel-node --presets es2015,stage-2"
+    "start": "npm install --only=dev && nodemon app.js --exec babel-node --presets es2015,stage-2"
   },
   "author": "Misha",
   "license": "ISC",
