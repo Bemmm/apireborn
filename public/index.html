@@ -1,0 +1,21 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+
+    var socket = io.connect('http://localhost:4000');
+
+    socket.on('order:count', (data) => {
+        console.log(data)
+    });
+
+//    socket.emit('join', {conversation: 1111111}, (err, data) => {
+//        console.log(data)
+//    });
+
+    socket.on('notify:system', (data) => {
+        console.log(data)
+    });
+</script>
+
+<div>
+    SOCKET IO
+</div>
