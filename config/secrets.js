@@ -5,7 +5,7 @@ const mb = 1024 * 1024;
 
 let config = {
     production: {
-        port: 3000,
+        port: process.env.PORT,
         db: process.env.MONGOLAB_URI || process.env.MONGODB || 'mongodb://13.95.149.21:27017/lexterr',
         sessionSecret: process.env.SESSION_SECRET || 'Dshtrih2',
         tokenSecret: process.env.TOKEN_SECRET || 'Dshtrih2',
