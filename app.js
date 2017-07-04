@@ -31,6 +31,11 @@ app.set('views', __dirname + '/public/views');
 app.set('view engine', 'html');
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }));
 
+app.all('/*', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+});
 process.on('uncaughtException', (err) => {
     logger.error(err.message, {stack: JSON.stringify(err.stack)});
     setTimeout(() => {
